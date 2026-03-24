@@ -290,15 +290,63 @@ h1.typing-text {
 
 .about {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 10rem;
+    text-align: center;
+    gap: 3rem;
+    padding: 10rem 8%;
     background: var(--second-background-color);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-content1 {
+    flex: 1;
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-content1 h1 {
+    font-size: 6rem;
+    font-family: 'Libre Baskerville', serif;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.about-content1 h2 {
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.about-content1 p {
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
 }
 
 .about-img img {
     width: 25vw;
-    height: 40vw;
     border: 50%;
     border-radius: 15%;
     box-shadow: 0 0 25px var(--main-color);
@@ -323,6 +371,84 @@ h1.typing-text {
 
 .about-content .btn {
     margin: 3rem 0;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-background-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 4rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--main-color);
+}
+
+.card-img {
+    flex: 1;
+}
+
+.card-img img {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.card-content {
+    padding: 2rem;
+    text-align: left;
+}
+
+.card-text {
+    flex: 1.5;
+    text-align: left;
+}
+
+.card-text h3 {
+    font-size: 2.5rem;
+    font-family: 'Libre Baskerville', serif;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.card-text p {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.experience-list {
+    list-style: disc;
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+}
+
+.experience-list li {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        flex-direction: column;
+        padding: 2rem;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -499,10 +625,59 @@ h1.typing-text {
     margin-bottom: 2rem;
 }
 
+.contact {
+    background-color: var(--background-color);
+}
 
+.contact h2 {
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact form .input-box input,
+.contact form .input-group-2 textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: var(--second-background-color);
+    border-radius: 1rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    outline: none;
+}
+
+.contact form .input-group-2 .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.contact form textarea {
+    width: 100%;
+    margin-top: 1rem;
+    resize: none;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    box-shadow: 0 0 15px var(--main-color);
+}
 
 .footer {
-    background-color: var(--background-color);
+    background-color: var(--second-background-color);
     padding: 50px 0;
     position: relative;
     z-index: 10;
@@ -530,7 +705,7 @@ h1.typing-text {
 
 .footer ul li a:hover {
     color: var(--main-color);
-    border-bottom: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--background-color);
 }
 
 .footer .copyright {
